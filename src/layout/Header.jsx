@@ -12,19 +12,8 @@ const Header = () => {
 
   return (
     <header className="flex justify-between items-center p-4 shadow-md">
-      <div className="font-bold text-xl">Bandage</div>
-      <nav className="hidden md:flex gap-4">
-        {navigation.map((item, idx) => (
-          <a key={idx} href="#" className="hover:underline">
-            {item}
-          </a>
-        ))}
-      </nav>
-      <div className="flex gap-4">
-        <Search />
-        <User />
-        <ShoppingCart />
-      </div>
+      <div className="font-bold text-xl">Bandage</div>  
+    
     </header>
   );
 };
