@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Menu, X, ShoppingCart, User, Search} from "lucide-heart";
+import {Menu, X, ShoppingCart, User, Search} from "lucide-react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
