@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const PageContent = ({ children }) => {
   return (
-    <main className="min-h-screen">
+    <main className="flex-1 p-8">
       {children}
     </main>
   );
