@@ -47,7 +47,9 @@ const HeroSlider = () => {
           background: white;
         }
       `}</style>
+      
           </div>
+          
         );
       };
  

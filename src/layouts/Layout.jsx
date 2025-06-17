@@ -9,6 +9,7 @@ export default function Layout({ children }) {
       <main className="flex-grow bg-gray-50">{children}</main>
       <footer className="bg-gray-800 text-white py-4 text-center">
         Footer Content
+        
       </footer>
     </div>
   );
