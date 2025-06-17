@@ -22,7 +22,11 @@ const HeroSlider = () => {
             {slides.map((slide) => (
                 <SwiperSlide key={slide.id}>
                   <div className="relative h-full">
-                    <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                    <img
+                     src={slide.image}
+                     alt={slide.title} 
+                     className="w-full h-full object-cover object-top transition-transform"
+                      />
                     <div className="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-20 space-y-4">
                         <h4 className="text-sm text-white opacity-80 uppercase tracking-wider">SUMMER 2025</h4>
                       <h2 className="text-3xl md:text-5xl text-white font-bold">{slide.title}</h2>

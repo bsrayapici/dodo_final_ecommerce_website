@@ -26,7 +26,7 @@ const CategoryPick = () => {
     <img 
       src={menImage} 
       alt="Men" 
-      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" 
     />
     <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-black font-semibold text-sm">
       MEN
@@ -38,7 +38,7 @@ const CategoryPick = () => {
     <img 
       src={womenImage} 
       alt="Women" 
-      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+      className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" 
     />
     <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-black font-semibold text-sm">
       WOMEN
@@ -51,7 +51,7 @@ const CategoryPick = () => {
       <img 
         src={accessoriesImage} 
         alt="Accessories" 
-        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" 
       />
       <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-black font-semibold text-sm">
         ACCESSORIES
@@ -62,7 +62,7 @@ const CategoryPick = () => {
       <img 
         src={kidsImage} 
         alt="Kids" 
-        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+        className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" 
       />
       <div className="absolute bottom-4 left-4 bg-white px-4 py-2 text-black font-semibold text-sm">
         KIDS
