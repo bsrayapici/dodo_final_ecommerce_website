@@ -5,7 +5,8 @@ import slide1 from "../assets/images/slide1.jpg";
 
 const slides = [
     { id: 1, image: slide1, title:'NEW COLLECTION', subtitle: 'We know how large objects will act, but things on a small scale.' },
-    { id: 2, image: slide1, title: 'Women's Latest Fashion Sale', subtitle: 'We know how large objects will act, but things on a small scale.'}
+    { id: 2, image: slide1, title: 'Women\'s Latest Fashion Sale', subtitle: \'We know how large objects will act, but things on a small scale.'}
+    }
   ];
 
 const HeroSlider = () => {
