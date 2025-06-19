@@ -9,7 +9,7 @@ const CtaSection = () => {
           {/* Görsel Alanı */}
           <div className="w-full md:w-1/2">
             <img
-              src={ctaImage}
+              src={model}
               alt="Call to Action"
               className="w-full h-auto object-contain"
             />
