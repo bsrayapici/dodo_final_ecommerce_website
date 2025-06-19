@@ -3,6 +3,7 @@ import HeroSlider from "../components/HeroSlider";
 import CategoryPick from '../components/CategoryPick';
 import ProductCategoryList from "../components/ProductCategoryList";
 import Slider from "../components/Slider";
+import CtaSection from "../components/CtaSection";
 
 
 
@@ -13,6 +14,7 @@ const HomePage = () => {
       <CategoryPick />
       <ProductCategoryList />
       <Slider />
+      <CtaSection />
     </div>
   );
 };
