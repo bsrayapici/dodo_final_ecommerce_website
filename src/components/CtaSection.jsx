@@ -14,7 +14,7 @@ const CtaSection = () => {
               className="w-full h-auto object-contain"
             />
           </div>
-  
+   
           {/* İçerik Alanı */}
           <div className="w-full md:w-1/2 text-center md:text-left">
             <p className="text-sm text-gray-400 uppercase mb-2">Summer 2020</p>
