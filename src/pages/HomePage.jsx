@@ -4,6 +4,8 @@ import CategoryPick from '../components/CategoryPick';
 import ProductCategoryList from "../components/ProductCategoryList";
 import Slider from "../components/Slider";
 import CtaSection from "../components/CtaSection";
+import FeaturedPosts from "../components/FeaturedPosts";
+
 
 
 
@@ -15,6 +17,7 @@ const HomePage = () => {
       <ProductCategoryList />
       <Slider />
       <CtaSection />
+      < FeaturedPosts />
     </div>
   );
 };
