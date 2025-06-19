@@ -50,11 +50,11 @@ const FeaturedPosts = () => {
             className="relative flex flex-col items-start p-[25px] pb-[35px] gap-[10px] w-[348px] h-[606px] bg-white rounded shadow-md"
           >
             {/* Görsel + NEW Badge */}
-            <div className="relative w-full h-[200px] overflow-hidden rounded">
+            <div className="relative w-full h-[300px] overflow-hidden rounded">
               <img 
               src={post.image}
                alt={post.title} 
-               className="w-full h-full object-cover" 
+               className=" absolute w-full h-full object-cover" 
                style={{ backgroundImage: `url(${post.image})` }}
 
                />
