@@ -17,11 +17,11 @@ const ProductCard = ({product}) => {
 
             <div className="flex items-center gap-2 mb-2">
                 {product.colors.map((color,index)=>(
-                    <span>
+                    <span
                         key={index}
                         className={"w-4 h-4 rounded-full"}
-                        style = {{backgroundColor:color}}
-                    </span>
+                        style = {{backgroundColor:color}} />
+                    
                 ))}
             </div>
             <div className="font-bold text-black text-lg">${product.price}</div>
