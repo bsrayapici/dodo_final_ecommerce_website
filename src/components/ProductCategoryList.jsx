@@ -1,12 +1,22 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
-// Use placeholder images from a reliable CDN for StackBlitz compatibility
+// Import all the images
+import slide1 from "../assets/images/slide1.jpg";
+import lila from "../assets/images/lila.png";
+import beyazli from "../assets/images/beyazlı.png";
+import pembeli from "../assets/images/pembeli.png";
+import mont from "../assets/images/mont.png";
+import kahve from "../assets/images/kahve.png";
+import bot from "../assets/images/bot.png";
+import tommy from "../assets/images/tommy.png";
+import zenco from "../assets/images/zenco.png";
+
 const products = [
     {
         id: 1,
         name: "White Tshirt",
-        image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400",
+        image: slide1, // Use imported image
         price: 29.99,
         category: "Women",
         colors: ['#000', '#F00', '#FFD700'],
@@ -14,7 +24,7 @@ const products = [
     {
         id: 2,
         name: 'Printed Shirt',
-        image: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400",
+        image: lila, // Use imported image
         price: 34.99,
         category: 'Men',
         colors: ['#3498db', '#2ecc71'],
@@ -22,7 +32,7 @@ const products = [
     {
         id: 3,
         name: 'Sweater',
-        image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400",
+        image: beyazli, // Use imported image
         price: 59.99,
         category: 'Kids',
         colors: ['#333', '#bbb'],
@@ -30,7 +40,7 @@ const products = [
     {
         id: 4,
         name: 'Black Jeans',
-        image: "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400",
+        image: pembeli, // Use imported image
         price: 79.99,
         category: 'Accessories',
         colors: ['#000'],
@@ -38,41 +48,41 @@ const products = [
     {
         id: 5,
         name: 'Jacket',
-        image: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400",
-        price: 89.99,
-        category: 'Outerwear',
-        colors: ['#8B4513'],
+        image: mont, // Use imported image
+        price: 79.99,
+        category: 'Accessories',
+        colors: ['#000'],
     },
     {
         id: 6,
         name: 'Coffee Style',
-        image: "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=400",
-        price: 65.99,
-        category: 'Casual',
-        colors: ['#D2691E'],
+        image: kahve, // Use imported image
+        price: 79.99,
+        category: 'Accessories',
+        colors: ['#000'],
     },
     {
         id: 7,
         name: 'Boots',
-        image: "https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=400",
-        price: 120.99,
-        category: 'Footwear',
+        image: bot, // Use imported image
+        price: 79.99,
+        category: 'Accessories',
         colors: ['#000'],
     },
     {
         id: 8,
         name: 'Tommy Style',
-        image: "https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=400",
-        price: 95.99,
-        category: 'Premium',
-        colors: ['#FF0000'],
+        image: tommy, // Use imported image
+        price: 79.99,
+        category: 'Accessories',
+        colors: ['#000'],
     },
     {
         id: 9,
         name: 'Zenco Style',
-        image: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=400",
-        price: 75.99,
-        category: 'Modern',
+        image: zenco, // Use imported image
+        price: 79.99,
+        category: 'Accessories',
         colors: ['#000'],
     },
 ];
