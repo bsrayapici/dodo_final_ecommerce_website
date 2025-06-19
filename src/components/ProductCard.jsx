@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
                 <div className="product-price">${product.price}</div>
             </div>
 
-            <style jsx>{`
+            <style>{`
                 .product-card {
                     display: flex;
                     flex-direction: column;
