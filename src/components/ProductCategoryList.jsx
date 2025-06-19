@@ -13,26 +13,19 @@ import tommy from "../assets/images/tommy.png";
 import zenco from "../assets/images/zenco.png";
 
 const products = [
-    {
-        id: 1,
-        name: "White Tshirt",
-        image: slide1, // Use imported image
-        price: 29.99,
-        category: "Women",
-        colors: ['#000', '#F00', '#FFD700'],
-    },
+ 
     {
         id: 2,
         name: 'Printed Shirt',
-        image: lila, // Use imported image
+        image: lila, 
         price: 34.99,
         category: 'Men',
-        colors: ['#3498db', '#2ecc71'],
+        colors: ['#000', '#F00', '#FFD700','#3498db', '#2ecc71'],
     },
     {
         id: 3,
         name: 'Sweater',
-        image: beyazli, // Use imported image
+        image: beyazli, 
         price: 59.99,
         category: 'Kids',
         colors: ['#333', '#bbb'],
@@ -40,15 +33,15 @@ const products = [
     {
         id: 4,
         name: 'Black Jeans',
-        image: pembeli, // Use imported image
+        image: pembeli, 
         price: 79.99,
         category: 'Accessories',
-        colors: ['#000'],
+        colors: ['#000', '#F00', '#FFD700','#3498db', '#2ecc71'],
     },
     {
         id: 5,
         name: 'Jacket',
-        image: mont, // Use imported image
+        image: mont, 
         price: 79.99,
         category: 'Accessories',
         colors: ['#000'],
@@ -64,23 +57,23 @@ const products = [
     {
         id: 7,
         name: 'Boots',
-        image: bot, // Use imported image
+        image: bot, 
         price: 79.99,
         category: 'Accessories',
-        colors: ['#000'],
+        colors: ['#000', '#F00', '#FFD700','#3498db', '#2ecc71'],
     },
     {
         id: 8,
         name: 'Tommy Style',
-        image: tommy, // Use imported image
+        image: tommy, 
         price: 79.99,
         category: 'Accessories',
-        colors: ['#000'],
+        colors: ['#FFD700','#3498db', '#2ecc71'],
     },
     {
         id: 9,
         name: 'Zenco Style',
-        image: zenco, // Use imported image
+        image: zenco, 
         price: 79.99,
         category: 'Accessories',
         colors: ['#000'],
