@@ -5,9 +5,7 @@ import ProductCategoryList from "../components/ProductCategoryList";
 import Slider from "../components/Slider";
 import CtaSection from "../components/CtaSection";
 import FeaturedPosts from "../components/FeaturedPosts";
-
-
-
+import Footer from "../layouts/Footer";
 
 const HomePage = () => {
   return (
@@ -17,7 +15,8 @@ const HomePage = () => {
       <ProductCategoryList />
       <Slider />
       <CtaSection />
-      < FeaturedPosts />
+      <FeaturedPosts />
+      <Footer />
     </div>
   );
 };
