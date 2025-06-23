@@ -40,35 +40,40 @@ const ShopPage = () => {
           </div>
         </div>
 
-        {/* FILTER + VIEW CONTROLS - CENTERED */}
-        <div className="flex flex-col md:flex-row justify-center items-center mb-6 gap-4 text-sm">
-          <div className="flex items-center gap-6">
+        {/* FILTER + VIEW CONTROLS - LEFT, CENTER, RIGHT */}
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4 text-sm">
+          {/* LEFT: Results Count */}
+          <div className="flex-shrink-0">
             <span className="text-[#737373]">Showing all 12 results</span>
-            
-            <div className="flex items-center gap-2">
-              <span className="text-[#737373]">Views:</span>
-              <button 
-                onClick={() => setViewMode('grid')}
-                className={`border p-2 rounded transition-colors ${
-                  viewMode === 'grid' 
-                    ? 'border-[#23A6F0] bg-[#23A6F0] text-white' 
-                    : 'border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                <Grid3X3 className="w-4 h-4" />
-              </button>
-              <button 
-                onClick={() => setViewMode('list')}
-                className={`border p-2 rounded transition-colors ${
-                  viewMode === 'list' 
-                    ? 'border-[#23A6F0] bg-[#23A6F0] text-white' 
-                    : 'border-gray-300 hover:bg-gray-50'
-                }`}
-              >
-                <List className="w-4 h-4" />
-              </button>
-            </div>
+          </div>
+          
+          {/* CENTER: View Buttons */}
+          <div className="flex items-center gap-2">
+            <span className="text-[#737373]">Views:</span>
+            <button 
+              onClick={() => setViewMode('grid')}
+              className={`border p-2 rounded transition-colors ${
+                viewMode === 'grid' 
+                  ? 'border-[#23A6F0] bg-[#23A6F0] text-white' 
+                  : 'border-gray-300 hover:bg-gray-50'
+              }`}
+            >
+              <Grid3X3 className="w-4 h-4" />
+            </button>
+            <button 
+              onClick={() => setViewMode('list')}
+              className={`border p-2 rounded transition-colors ${
+                viewMode === 'list' 
+                  ? 'border-[#23A6F0] bg-[#23A6F0] text-white' 
+                  : 'border-gray-300 hover:bg-gray-50'
+              }`}
+            >
+              <List className="w-4 h-4" />
+            </button>
+          </div>
 
+          {/* RIGHT: Sort and Filter */}
+          <div className="flex items-center gap-3 flex-shrink-0">
             <select 
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
