@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ProductCard from "../components/ProductCard";
 import ShopCategoryCard from "../components/ShopCategoryCard";
 import Breadcrumb from "../components/Breadcrumb";
+import { Grid3X3, List } from "lucide-react";
 
 // Import category images
 import womenImage from '../assets/images/women.png';
@@ -18,6 +19,9 @@ const categories = [
 ];
 
 const ShopPage = () => {
+  const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
+  const [sortBy, setSortBy] = useState('popularity');
+
   return (
     <div>
       <Breadcrumb />
@@ -36,50 +40,96 @@ const ShopPage = () => {
           </div>
         </div>
 
-        {/* FILTER + VIEW CONTROLS */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4 text-sm">
-          <span className="text-[#737373]">Showing all 12 results</span>
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="text-[#737373] mr-2">Views:</span>
-            <button className="border border-gray-300 p-2 hover:bg-gray-50">
-              <div className="w-4 h-4 grid grid-cols-2 gap-0.5">
-                <div className="bg-gray-400"></div>
-                <div className="bg-gray-400"></div>
-                <div className="bg-gray-400"></div>
-                <div className="bg-gray-400"></div>
-              </div>
-            </button>
-            <button className="border border-gray-300 p-2 hover:bg-gray-50">
-              <div className="w-4 h-4 flex flex-col gap-0.5">
-                <div className="bg-gray-400 h-1"></div>
-                <div className="bg-gray-400 h-1"></div>
-                <div className="bg-gray-400 h-1"></div>
-              </div>
-            </button>
-            <select className="border border-gray-300 px-3 py-2 rounded text-[#737373]">
-              <option>Popularity</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
+        {/* FILTER + VIEW CONTROLS - CENTERED */}
+        <div className="flex flex-col md:flex-row justify-center items-center mb-6 gap-4 text-sm">
+          <div className="flex items-center gap-6">
+            <span className="text-[#737373]">Showing all 12 results</span>
+            
+            <div className="flex items-center gap-2">
+              <span className="text-[#737373]">Views:</span>
+              <button 
+                onClick={() => setViewMode('grid')}
+                className={`border p-2 rounded transition-colors ${
+                  viewMode === 'grid' 
+                    ? 'border-[#23A6F0] bg-[#23A6F0] text-white' 
+                    : 'border-gray-300 hover:bg-gray-50'
+                }`}
+              >
+                <Grid3X3 className="w-4 h-4" />
+              </button>
+              <button 
+                onClick={() => setViewMode('list')}
+                className={`border p-2 rounded transition-colors ${
+                  viewMode === 'list' 
+                    ? 'border-[#23A6F0] bg-[#23A6F0] text-white' 
+                    : 'border-gray-300 hover:bg-gray-50'
+                }`}
+              >
+                <List className="w-4 h-4" />
+              </button>
+            </div>
+
+            <select 
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="border border-gray-300 px-3 py-2 rounded text-[#737373] bg-white"
+            >
+              <option value="popularity">Popularity</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Newest</option>
             </select>
+            
             <button className="bg-[#23A6F0] text-white px-4 py-2 rounded hover:bg-blue-600 transition">
               Filter
             </button>
           </div>
         </div>
 
-        {/* PRODUCT GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-8">
+        {/* PRODUCT GRID/LIST */}
+        <div className={`mb-8 ${
+          viewMode === 'grid' 
+            ? 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6' 
+            : 'flex flex-col gap-4'
+        }`}>
           {[...Array(12)].map((_, i) => (
-            <ProductCard 
-              key={i} 
-              product={{ 
-                name: "Graphic Design", 
-                category: "English Department", 
-                price: 16.48, 
-                colors: ["#23A6F0", "#23856D", "#E77C40", "#252B42"], 
-                image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop" 
-              }} 
-            />
+            <div key={i} className={viewMode === 'list' ? 'flex border rounded-lg p-4 hover:shadow-md transition-shadow' : ''}>
+              {viewMode === 'list' ? (
+                <>
+                  <div className="w-32 h-32 flex-shrink-0 mr-4">
+                    <img 
+                      src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+                      alt="Product"
+                      className="w-full h-full object-cover rounded"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg mb-1">Graphic Design</h3>
+                    <p className="text-sm text-gray-500 mb-2">English Department</p>
+                    <div className="flex items-center gap-2 mb-2">
+                      {["#23A6F0", "#23856D", "#E77C40", "#252B42"].map((color, index) => (
+                        <span
+                          key={index}
+                          className="w-4 h-4 rounded-full inline-block"
+                          style={{ backgroundColor: color }}
+                        ></span>
+                      ))}
+                    </div>
+                    <div className="font-bold text-black text-lg">$16.48</div>
+                  </div>
+                </>
+              ) : (
+                <ProductCard 
+                  product={{ 
+                    name: "Graphic Design", 
+                    category: "English Department", 
+                    price: 16.48, 
+                    colors: ["#23A6F0", "#23856D", "#E77C40", "#252B42"], 
+                    image: "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop" 
+                  }} 
+                />
+              )}
+            </div>
           ))}
         </div>
 
