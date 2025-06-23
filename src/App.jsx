@@ -3,24 +3,22 @@ import React from 'react';
 import Footer from "./layouts/Footer";
 import HomePage from "./pages/HomePage";
 import Layout from './layouts/Layout';
-
-
-
-
+import ShopPage from './pages/ShopPage';
 
 function App() {
   return (
-    <Layout>
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <Layout>
+        <div className="min-h-screen flex flex-col">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* Add more routes here as needed */}
+            <Route path="/shop" element={<ShopPage />} />
+            {/* Diğer route'lar */}
           </Routes>
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </Layout>
     </Router>
-    </Layout>
   );
 }
 
