@@ -16,7 +16,6 @@ const HomePage = () => {
       <Slider />
       <CtaSection />
       <FeaturedPosts />
-      <Footer />
     </div>
   );
 };
