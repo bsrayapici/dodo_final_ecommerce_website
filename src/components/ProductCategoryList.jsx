@@ -2,7 +2,6 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 // Import all the images
-import slide1 from "../assets/images/slide1.jpg";
 import lila from "../assets/images/lila.png";
 import beyazli from "../assets/images/beyazlı.png";
 import pembeli from "../assets/images/pembeli.png";

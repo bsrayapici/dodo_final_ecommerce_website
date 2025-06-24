@@ -16,4 +16,4 @@ const ShopCategoryCard = ({ category }) => {
   );
 };
 
-export default ShopCategoryCard;
+export default ShopCategoryCard; 
