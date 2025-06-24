@@ -15,7 +15,6 @@ export default function Layout({ children }) {
       <Header />
       {location.pathname !== "/" && <Breadcrumb />}
       <main className="flex-grow bg-white">{children}</main>
-      <Footer />
     </div>
   );
 }
